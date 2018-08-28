@@ -20,11 +20,11 @@ for p in soup.findAll('Placemark'):
         gcode = ''
     coords = p.findAll('coordinates')[0].contents[0].replace('\n', '')
     if len(coords.split(',')) == 3:
-        lat, lon, _ = coords.split(',')
+        lon, lat, _ = coords.split(',')
         languagetable += [
                 {
-                    'ID': idx,
-                    'Name': name,
+                    'ID': idx.strip(),
+                    'Name': name.strip(),
                     'Glottocode': gcode,
                     'Latitude': lat.strip(),
                     'Longitude': lon.strip(),
@@ -36,7 +36,7 @@ with open('raw/Parameters.tsv') as f:
     params = [t.strip('\n').split('\t') for t in tmp]
 
 for line in params[1:]:
-    parametertable += [{a: b for a, b in zip(params[0], line)}]
+    parametertable += [{a.strip(): b.strip() for a, b in zip(params[0], line)}]
 
 with open('raw/data.txt') as f:
     forms = f.readlines()
