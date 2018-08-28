@@ -1,4 +1,4 @@
-# Converting a Chinese Structure Dataset to CLDF
+# Chinese Structure Dataset from Szeto et al.'s (2018) paper in CLDF-Format
 
 ## Notes on the dataset
 
