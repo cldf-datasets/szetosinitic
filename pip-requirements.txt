@@ -1,0 +1,3 @@
+pycldf
+lxml
+beautifulsoup4

@@ -1,0 +1,21 @@
+ID	Name	Description	Comment
+p-1	tone-categories	5 or more tone categories	phonological
+p-2	retroflex-fricative-initials	Retroflex fricative initials	phonological/diachronic
+p-3	nasal-coda	Bilabial nasal coda 	phonological
+p-4	stop-codas	Stop codas	phonological/diachronic
+p-5	word-for-snake	Monosyllabic word for 'snake'	lexical
+p-6	differentiation-hand-arm	Differentiation between 'hand' and 'arm'	lexical/semantic
+p-7	defecate-and-urinate	Differentiation between 'defecate' and 'urinate'	lexical
+p-8 	differentiation-eat-drink	Differentiation between 'eat' and 'drink'	lexical/semantic
+p-9	void-suffix-in-table	Semantically void suffix in 'table'	lexical
+p-10	differentiation-between-human-pig-classifier	Different classifiers for humans and pigs	lexical/semantic
+p-11	subject-with-definite-reference	[CLF N] constructions in subject position with definite reference	syntactic
+p-12	reduplicated-nouns	Reduplicated monosyllabic nouns	morphological
+p-13	auxiliary-from-acquire	Post-verbal modal auxiliary developed from 'ge/acquire'	syntactical/diachronic
+p-14	animal-gender-marking	Modified-modifier order in animal gender marking	syntactical
+p-15	post-verbal-first	Post-verbal adverb meaning 'first'	lexical/syntactical
+p-16	double-object-dative	[V DO IO] order in double object dative constructions	syntactic
+p-17	give-as-disposal-marker	'Give' as a disposal marker	syntactic/diachronic
+p-18	give-as-passive-marker	'Give' as a passive marker	syntactic/diachronic
+p-19	vp-associated-motion-marker	'Go' as a post-VP associated motion marker	syntactical/diachronic
+p-20	marker-standard-adjective-order	Marker-Standard-Adjective order in comparatives	syntactics

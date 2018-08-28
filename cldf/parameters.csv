@@ -1,0 +1,21 @@
+ID,Name,Description
+p-1,tone-categories,5 or more tone categories
+p-2,retroflex-fricative-initials,Retroflex fricative initials
+p-3,nasal-coda,Bilabial nasal coda 
+p-4,stop-codas,Stop codas
+p-5,word-for-snake,Monosyllabic word for 'snake'
+p-6,differentiation-hand-arm,Differentiation between 'hand' and 'arm'
+p-7,defecate-and-urinate,Differentiation between 'defecate' and 'urinate'
+p-8 ,differentiation-eat-drink,Differentiation between 'eat' and 'drink'
+p-9,void-suffix-in-table,Semantically void suffix in 'table'
+p-10,differentiation-between-human-pig-classifier,Different classifiers for humans and pigs
+p-11,subject-with-definite-reference,[CLF N] constructions in subject position with definite reference
+p-12,reduplicated-nouns,Reduplicated monosyllabic nouns
+p-13,auxiliary-from-acquire,Post-verbal modal auxiliary developed from 'ge/acquire'
+p-14,animal-gender-marking,Modified-modifier order in animal gender marking
+p-15,post-verbal-first,Post-verbal adverb meaning 'first'
+p-16,double-object-dative,[V DO IO] order in double object dative constructions
+p-17,give-as-disposal-marker,'Give' as a disposal marker
+p-18,give-as-passive-marker,'Give' as a passive marker
+p-19,vp-associated-motion-marker,'Go' as a post-VP associated motion marker
+p-20,marker-standard-adjective-order,Marker-Standard-Adjective order in comparatives
