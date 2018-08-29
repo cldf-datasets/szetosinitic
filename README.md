@@ -34,9 +34,16 @@ dc:source      sources.bib
 Path            Type              Rows
 --------------  --------------  ------
 values.csv      ValueTable         882
-parameters.csv  ParameterTable      20
+parameters.csv  ParameterTable      21
 languages.csv   LanguageTable       42
 sources.bib     Sources              1
+
+```
+
+## Converting to NEXUS format
+
+```shell
+$ python nexus.py
 ```
 
 ## Acknowledgements
