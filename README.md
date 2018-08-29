@@ -1,5 +1,7 @@
 # Chinese Structure Dataset from Szeto et al.'s (2018) paper in CLDF-Format
 
+[![Build Status](https://travis-ci.org/cldf-datasets/szetosinitic.svg?branch=master)](https://travis-ci.org/cldf-datasets/szetosinitic)
+
 ## Notes on the dataset
 
 This is a structural dataset originally published along with a paper by Szeto et al. (2018) on Chinese dialect classification:
