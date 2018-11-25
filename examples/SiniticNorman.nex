@@ -1,0 +1,39 @@
+#NEXUS
+
+BEGIN PAUP; 
+ DEFAULTS SAVETREES Format=Nexus BrLens SaveBootP=Both; 
+ DEFAULTS SAVEDIST Format=Nexus Triangle=Both Undefined=Asterisk;
+ DEFAULT GETTREES Duptrees=Eliminate;
+ DEFAULTS CONTREE /NoStrict NoSemiStrict Adams NoMajRule NoLe50 NoGrpFreq Indices;
+ DEFAULTS DESCRIBE Plot=Phylogram;
+ DEFAULTS BANDB AddSeq=Furthest;
+ [DEFAULTS HSEARCH AddSeq=Random NReps=100 NChuck=10000 ChuckScore=xxx;] 
+ DEFAULTS BOOTSTRAP NReps=10000 Format=Nexus;
+ DEFAULT NJ BioNJ=Yes BrLens=Yes; 
+ DEFAULT BOOTSTRAP Search=Heuristic NRep=10000;
+ SET SemiGraph MaxTrees=100 Increase=Auto AutoInc=50 Root=Outgroup OutRoot=Monophyl TCompress TaxLabels=Full 
+		Criterion=Parsimony StoreBrLens AllowPunct;
+END;
+
+BEGIN DATA;
+    DIMENSIONS NTAX=11 NCHAR=15;
+    FORMAT DATATYPE=STANDARD GAP=- MISSING=?;
+MATRIX
+Beijing     111111111111111
+Taiyuan     111111111111111
+Yangzhou    111111111111111
+Suzhou      001101000110001
+Wenzhou     001100000010000
+Changsha    101111011000010
+Shuangfeng  101101011000000
+Nanchang    001101001000010
+Meixian     000000100000000
+Guangzhou   000000000000000
+Jiangyong   000100000000000
+
+;
+END;
+
+BEGIN PAUP; 
+ DSet Distance=Mean Objective=LSfit;
+END; 
