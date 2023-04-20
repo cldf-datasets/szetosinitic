@@ -63,6 +63,8 @@ class Dataset(BaseDataset):
             {k.strip(): v.strip() for k, v in param.items()}
             for param in parametertable]
 
+        codetable = self.etc_dir.read_csv('codes.csv', dicts=True)
+
         valuetable = []
         with open(self.raw_dir / 'data.txt') as f:
             for line in f:
@@ -70,11 +72,13 @@ class Dataset(BaseDataset):
                 lid = data[0]
                 for i, p in enumerate(data[1:]):
                     pid = 'p-{}'.format(i + 1)
+                    code_id = '{}-{}'.format(pid, 'y' if p == '+' else 'n')
                     valuetable.append({
                         "ID": '{0}-{1}-{2}'.format(lid, pid, len(valuetable) + 1),
                         "Value": p,
                         "Language_ID": lid,
                         "Parameter_ID": pid,
+                        'Code_ID': code_id,
                         "Source": ["Szeto2018"]
                     })
 
@@ -90,9 +94,11 @@ class Dataset(BaseDataset):
                 title='Typological variation across Mandarin dialects: An areal perspective with a quantitative approach',
                 doi='10.1515/lingty-2018-0009'))
 
-        args.writer.cldf.add_component('ParameterTable')
         args.writer.cldf.add_component('LanguageTable')
+        args.writer.cldf.add_component('ParameterTable')
+        args.writer.cldf.add_component('CodeTable')
 
-        args.writer.objects['ValueTable'] = valuetable
-        args.writer.objects['ParameterTable'] = parametertable
         args.writer.objects['LanguageTable'] = languagetable
+        args.writer.objects['ParameterTable'] = parametertable
+        args.writer.objects['CodeTable'] = codetable
+        args.writer.objects['ValueTable'] = valuetable
