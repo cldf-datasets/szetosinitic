@@ -10,7 +10,7 @@ This is a structural dataset originally published along with a paper by Szeto et
  
 The raw data which you can find in the folder `raw/` was extracted and typed off from the original paper, which contains the major data, but unfortunately does not list any sources as per dataset.
 
-The main script that converts the data is the script `chinese.py`. We will show later how to use this.
+The data is converted using [cldfbench](https://github.com/cldf/cldfbench). We will show later how to use this.
 
 ## Install requirements
 
