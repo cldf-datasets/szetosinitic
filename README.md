@@ -15,31 +15,42 @@ The main script that converts the data is the script `chinese.py`. We will show 
 ## Install requirements
 
 ```shell
-$ pip -r pip-requirements.txt
+$ pip install -e .[test]
 ```
 
 ## Running the script
 
 ```shell
-$ python chinese.py
+$ cldfbench makecldf cldfbench_szetosinitic.py
 ```
 
 ## Test with `pycldf` API
 
 ```shell
-$ cldf stats cldf/StructureDataset-metadata.json 
-key            value
--------------  ----------------------------------------------------
-dc:conformsTo  http://cldf.clld.org/v1.0/terms.rdf#StructureDataset
-dc:source      sources.bib
+$ pytest
+$ cldf stats cldf/cldf-metadata.json 
+<cldf:v1.0:StructureDataset at cldf>
+                          value
+------------------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+dc:bibliographicCitation  Szeto, P. Y.; Ansaldo, U. & Matthews, S.Typological variation across Mandarin dialects: An areal perspective with a quantitative approach Linguistic Typology, 2018, 22, 233-275.
+dc:conformsTo             http://cldf.clld.org/v1.0/terms.rdf#StructureDataset
+dc:identifier             https://github.com/cldf-datasets/szetosinitic
+dc:license                http://www.apache.org/licenses/LICENSE-2.0
+dc:source                 sources.bib
+dc:title                  Structure Dataset on Chinese Dialects
+dcat:accessURL            https://github.com/cldf-datasets/szetosinitic
+prov:wasDerivedFrom       [{'rdf:about': 'https://github.com/cldf-datasets/szetosinitic', 'rdf:type': 'prov:Entity', 'dc:created': 'v1.0-7-g3c848be', 'dc:title': 'Repository'}, {'rdf:about': 'https://github.com/glottolog/glottolog', 'rdf:type': 'prov:Entity', 'dc:created': 'v4.7', 'dc:title': 'Glottolog'}]
+prov:wasGeneratedBy       [{'dc:title': 'python', 'dc:description': '3.8.10'}, {'dc:title': 'python-packages', 'dc:relation': 'requirements.txt'}]
+rdf:ID                    szetosinitic
+rdf:type                  http://www.w3.org/ns/dcat#Distribution
 
-Path            Type              Rows
+                Type              Rows
 --------------  --------------  ------
 values.csv      ValueTable         882
-parameters.csv  ParameterTable      21
 languages.csv   LanguageTable       42
+parameters.csv  ParameterTable      21
+codes.csv       CodeTable           42
 sources.bib     Sources              1
-
 ```
 
 ## Converting to NEXUS format
